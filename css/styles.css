@@ -16,22 +16,12 @@ h1{
 
 h2 {
     position: absolute;
-    left:800px;
+    left:900px;
     top: 120px;
     color: white;
     font-size: 45px;
     border: 2px solid white;
     padding: 25px;
-}
-
-button{
-  float: right;
-}
-
-
-
-button {
-  font-size: 20px;
 }
 
 #addItem2, #addItem3, #item-form2, #item-form3{
@@ -42,9 +32,7 @@ button {
   border:1px solid #333;
   background:#6479fd;
 }
-.button:hover{
-  background:#a4a9fd;
-}
+
 .dialog{
   border:5px solid #666;
   padding:10px;
@@ -65,17 +53,18 @@ input[type=text]{
   border:1px solid #000;
   background:#ff9999;
   margin:5px;
+  margin-top: 0;
 }
 
 #btnOK:hover{
   border:1px solid #000;
   background:#ffacac;
+  margin-top: 0;
 }
 
 
 #item-form, #item-form2, #item-form3{
   width: 350px;
-
 }
 
 ul {
@@ -84,6 +73,9 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: absolute;
+    top: 350px;
+    width: 100%;
 }
 
 li {
@@ -98,7 +90,8 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+
+.well {
+    background: #9999c1;
+    border: 1px solid black;
 }

@@ -9,17 +9,16 @@
     <title>BorrowUp</title>
   </head>
   <body>
-    <button id="addItem1" class="btn ">Add Item</button>
-    <button id="addItem2" class="btn ">Add Item</button>
-    <button id="addItem3" class="btn ">Add Item</button>
     <h1>Borrow Up</h1>
     <h2>We're gonna like the way you look</h2>
     <ul>
-        <li style="float:right"><a class="active" href="#about">Add Item</a></li>
-        <li style="float:right"><a class="active" href="#about">About</a></li>
-        <li style="float:right"><a class="active" href="#about">Categories</a></li>
-        <li style="float:right"><a class="active" href="#about">Home</a></li>
-      </ul>
+      <li style="float:right"><a id="addItem1" href="#about">Add Item</a></li>
+      <li style="float:right"><a id="addItem2" href="#about">Add Item</a></li>
+      <li style="float:right"><a id="addItem3" href="#about">Add Item</a></li>
+      <li style="float:right"><a class="active" href="#about">About</a></li>
+      <li style="float:right"><a class="active" href="#about">Categories</a></li>
+      <li style="float:right"><a class="active" href="#about">Home</a></li>
+    </ul>
     <div class="container">
       <form id="item-form">
         <br>
@@ -34,14 +33,19 @@
         <img id="image1" height="200" alt="Image preview...">
       </form>
       <form id="item-form2">
+        <br>
+        <br>
         <label for="item2">Enter in Item Name</label>
         <input id="item2" class="form-control" type="text" maxlength="15">
         <label for="price2">Enter in Price</label>
         <input id="price2" class="form-control" type="text" maxlength="10">
         <label for="description2">Enter in the Item Description</label>
         <input id="description2" class="form-control" type="text" maxlength="40">
-
+        <input id="image1" type="file" onchange="previewFile()"><br>
+        <img id="image1" height="200" alt="Image preview...">
       </form>
+      <br>
+      <br>
       <form id="item-form3">
         <label for="item3">Enter in Item Name</label>
         <input id="item3" class="form-control" type="text" maxlength="15">
@@ -49,6 +53,8 @@
         <input id="price3" class="form-control" type="text" maxlength="10">
         <label for="description3">Enter in the Item Description</label>
         <input id="description3" class="form-control" type="text" maxlength="40">
+        <input id="image1" type="file" onchange="previewFile()"><br>
+        <img id="image1" height="200" alt="Image preview...">
       </form>
       <div class="col-md-4">
         <div id="contacts">
