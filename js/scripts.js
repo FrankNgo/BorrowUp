@@ -26,7 +26,7 @@ $(document).ready(function() {
     var price = $("input#price").val();
     var description = $("input#description").val();
     var newItem = new Item(item, price, description);
-    $("#contacts").append("<b><span class='contact'><div class='well'>" + newItem.itemName + newItem.itemPrice + newItem.itemDescription + "</div></span></b>");
+    $("#contacts").append("<b><span class='contact'><div class='well'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
@@ -39,7 +39,7 @@ $(document).ready(function() {
     var price2 = $("input#price2").val();
     var description2 = $("input#description2").val();
     var newItem2 = new Item2(item2, price2, description2);
-    $("#contacts2").append("<b><span class='contact'><div class='well'>" + newItem2.itemName2+ newItem2.itemPrice2 + newItem2.itemDescription2 + "</div></span></b>");
+    $("#contacts2").append("<b><span class='contact'><div class='well'>" + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.itemDescription2 + "</div></span></b>");
     $("#item-form2").hide();
     $("#item-form3").show();
     $("#addItem2").hide();
@@ -51,7 +51,7 @@ $(document).ready(function() {
     var price3 = $("input#price3").val();
     var description3 = $("input#description3").val();
     var newItem3 = new Item3(item3, price3, description3);
-    $("#contacts3").append("<b><span class='contact'><div class='well'>" + newItem3.itemName3+ newItem3.itemPrice3 + newItem3.itemDescription3 + "</div></span></b>");
+    $("#contacts3").append("<b><span class='contact'><div class='well'>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.itemDescription3 + "</div></span></b>");
     $("#item-form3").hide();
     $("#item-form").show();
     $("#addItem3").hide();
@@ -59,3 +59,15 @@ $(document).ready(function() {
 
   });
 });
+
+// $(function() {
+// $(".button").click(function() {
+//     $("#myform #valueFromMyButton").text($(this).val().trim());
+//     $("#myform input[type=text]").val('');
+//     $("#myform").show(500);
+// });
+// $("#btnOK").click(function() {
+//     $("#valueFromMyModal").val($("#myform input[type=text]").val().trim());
+//     $("#myform").hide(400);
+// });
+// });
