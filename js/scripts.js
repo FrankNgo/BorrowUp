@@ -1,8 +1,9 @@
 //Business Logic
-function Item(item, price, description){
+function Item(item, price, description, image1){
   this.itemName = item;
   this.itemPrice = price;
   this.itemDescription = description;
+  this.image = image1;
 }
 
 function Item2(item2, price2, description2){
@@ -17,6 +18,19 @@ function Item3(item3, price3, description3){
   this.itemDescription3 = description3;
 }
 
+function previewFile(){
+ var preview = document.querySelector('img'); //selects the query named img
+ var file = document.querySelector('input[type=file]').files[0]; //sames as here
+ var reader  = new FileReader();
+ reader.onloadend = function () {
+     preview.src = reader.result;
+ }
+ if (file) {
+     reader.readAsDataURL(file); //reads the data as a URL
+ } else {
+     preview.src = "";
+ }
+}
 
 
 $(document).ready(function() {
@@ -25,12 +39,15 @@ $(document).ready(function() {
     var item = $("input#item").val();
     var price = $("input#price").val();
     var description = $("input#description").val();
-    var newItem = new Item(item, price, description);
-    $("#contacts").append("<b><span class='contact'><div class='well'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
+    var image1 = $(this).find('image').attr('src');
+    console.log(image1);
+    var newItem = new Item(item, price, description, image1);
+    $("#contacts").append("<b><span class='contact'><div class='well'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + newItem.image1+ "</div></span></b>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
     $("#addItem2").show();
+      previewFile();  //calls the function named previewFile()
   });
 
   $("#addItem2").click(function(event){
@@ -58,6 +75,12 @@ $(document).ready(function() {
     $("#addItem1").show();
 
   });
+  function readURL(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#clock').css('background-image', 'url(' + getImagePath + ')');
+        }
+
+
 });
 
 // $(function() {
