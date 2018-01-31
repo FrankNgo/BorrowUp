@@ -41,13 +41,14 @@ $(document).ready(function() {
     var description = $("input#description").val();
     var image1 = $(this).find('image').attr('src');
     console.log(image1);
-    var newItem = new Item(item, price, description, image1);
+    var newItem = new Item (item, price, description, image1);
     $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
     $("#addItem2").show();
-      previewFile();  //calls the function named previewFile()
+    $(".contactUs").hide();
+    $(".aboutUs").hide();
   });
 
   $("#addItem2").click(function(event){
@@ -61,6 +62,8 @@ $(document).ready(function() {
     $("#item-form3").show();
     $("#addItem2").hide();
     $("#addItem3").show();
+    $(".contactUs").hide();
+    $(".aboutUs").hide();
   });
   $("#addItem3").click(function(event){
     event.preventDefault();
@@ -73,12 +76,42 @@ $(document).ready(function() {
     $("#item-form").show();
     $("#addItem3").hide();
     $("#addItem1").show();
+    $(".contactUs").hide();
+    $(".aboutUs").hide();
 
   });
   function readURL(event){
          var getImagePath = URL.createObjectURL(event.target.files[0]);
          $('#clock').css('background-image', 'url(' + getImagePath + ')');
         }
+
+  $(".aboutUsLink").click(function(event){
+    event.preventDefault();
+    $(".aboutUs").fadeIn();
+    $(".contactUs").hide();
+    $("#contacts").hide();
+    $("#contacts2").hide();
+    $("#contacts3").hide();
+
+  });
+
+  $(".contactUsLink").click(function(event){
+    event.preventDefault();
+    $(".aboutUs").hide();
+    $(".contactUs").fadeIn();
+    $("#contacts").hide();
+    $("#contacts2").hide();
+    $("#contacts3").hide();
+  });
+
+  $(".homeLink").click(function(event){
+    event.preventDefault();
+    $(".aboutUs").hide();
+    $(".contactUs").hide();
+    $("#contacts").fadeIn();
+    $("#contacts2").fadeIn();
+    $("#contacts3").fadeIn();
+  });
 
 
 });

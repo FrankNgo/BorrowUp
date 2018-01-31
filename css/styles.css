@@ -4,7 +4,7 @@ body{
 }
 
 
-h1{
+.title{
   background: url(https://i.imgur.com/HQbgknF.gif);
   background-size: cover;
   background-position: center;
@@ -22,7 +22,7 @@ h1{
   margin-bottom: -20px;
 }
 
-h2 {
+.titleWords{
     position: absolute;
     left:900px;
     top: 120px;
@@ -30,6 +30,10 @@ h2 {
     font-size: 45px;
     border: 2px solid white;
     padding: 25px;
+}
+
+button{
+  background-color: #ddd;
 }
 
 #modalSubmit{
@@ -44,7 +48,7 @@ h2 {
 
 }
 
-#addItem2, #addItem3, #item-form2, #item-form3{
+#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs{
   display: none;
 }
 
@@ -63,46 +67,37 @@ h2 {
 }
 
 
-#item-form, #item-form2, #item-form3{
+#item-form, #item-form2, #item-form3,{
   width: 350px;
 }
 
 .well {
-    background: #9999c1;
+    background: white;
     border: 1px solid black;
     width: 350px;
     height: 400px;
 }
-/*
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: absolute;
-    top: 350px;
-    width: 100%;
-    list-style-type:none;
-list-style-position:none;
+
+#about{
+  margin-top: 20px;
+  width: 1200px;
+  font-size: 20px;
 }
 
-li {
-    float: left;
-    list-style-type:none;
-list-style-position:none;
+#contact{
+  margin-top: 20px;
+  width: 1000px;
+  font-size: 20px;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-decoration: none;
-    font-size: 30px;
-}*/
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+
 
 .navbar {
     background-color: #333;
@@ -163,9 +158,4 @@ li a {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.button{
-  background-color: grey;
-
 }
