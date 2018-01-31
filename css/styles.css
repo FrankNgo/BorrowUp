@@ -1,7 +1,13 @@
+body{
+
+  background: #E5E7E9
+}
+
+
 h1{
   background: url(https://i.imgur.com/HQbgknF.gif);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   width: 100%;
   height: 370px;
   background-repeat: no-repeat;
@@ -157,4 +163,9 @@ li a {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.button{
+  background-color: grey;
+
 }

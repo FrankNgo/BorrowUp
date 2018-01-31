@@ -12,102 +12,117 @@
   <body>
     <h1>Borrow Up</h1>
     <center>
-    <h2>Bringing People Closer Together</h2>
-  </center>
+      <h2>Bringing People Closer Together</h2>
+    </center>
 
-<div class="navbar">
-  <a data-toggle="modal" data-target="#myModal" href="#about">Add Item</a>
-  <a href="#home">Contact Us</a>
-  <a href="#news">About Us</a>
-  <div class="dropdown">
-    <button class="dropbtn">Catagories
+    <div class="navbar">
+      <a data-toggle="modal" data-target="#myModal" href="#about">Add Item</a>
+      <a href="#home">Contact Us</a>
+      <a href="#news">About Us</a>
+      <div class="dropdown">
+        <button class="dropbtn">Catagories
+        <i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-content">
+          <a href="#">Something</a>
+          <a href="#">Something</a>
+          <a href="#">Something</a>
+          <a href="#">Something</a>
+          <a href="#">Something</a>
+          <a href="#">Something</a>
+        </div>
+      </div>
+
+      <!-- login -->
+      <div class="dropdown">
+        <button class="dropbtn">Login
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
-      <a href="#">Something</a>
-      <a href="#">Something</a>
-      <a href="#">Something</a>
-      <a href="#">Something</a>
-      <a href="#">Something</a>
-      <a href="#">Something</a>
+        <div class="dropdown-content">
+          <div class="container">
+            <br>
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br>
+            <br>
+            <button type="submit">Login</button>
+            <button type="submit">Create Account</button>
+            <br>
+            <label>
+                  <br>
+          <input type="checkbox" checked="checked"> Remember me
+        </label>
+          </div>
+        </div>
+      </div>
+      <a href="#news">Home</a>
     </div>
-  </div>
-  <a href="#news">Account</a>
-  <a href="#news">Home</a>
-</div>
     <div class="container">
       <div class="container">
         <div class="modal fade" id="myModal">
           <div class="modal-dialog">
             <div class="modal-content">
-              <!-- Modal Header -->
+
               <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
+                <h4 class="modal-title">New Item</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-
-              <!-- Modal body -->
               <div class="modal-body">
 
-      <form id="item-form">
-        <br>
-        <br>
-        <label for="item">Enter in Item Name</label>
-        <input id="item" class="form-control" type="text" maxlength="15">
-        <label for="price">Enter in Price</label>
-        <input id="price" class="form-control" type="text" maxlength="10" >
-        <label for="description">Enter in the Item Description</label>
-        <input id="description" class="form-control" type="text" maxlength="40">
-        <input id="image1" type="file" onchange="previewFile()"><br>
-        <img id="image1" height="200" alt="Image preview...">
-      </form>
-      <form id="item-form2">
-        <br>
-        <br>
-        <label for="item2">Enter in Item Name</label>
-        <input id="item2" class="form-control" type="text" maxlength="15">
-        <label for="price2">Enter in Price</label>
-        <input id="price2" class="form-control" type="text" maxlength="10">
-        <label for="description2">Enter in the Item Description</label>
-        <input id="description2" class="form-control" type="text" maxlength="40">
-        <input id="image1" type="file" onchange="previewFile()"><br>
-        <img id="image1" height="200" alt="Image preview...">
-      </form>
-      <br>
-      <br>
-      <form id="item-form3">
-        <label for="item3">Enter in Item Name</label>
-        <input id="item3" class="form-control" type="text" maxlength="15">
-        <label for="price3">Enter in Price</label>
-        <input id="price3" class="form-control" type="text" maxlength="10">
-        <label for="description3">Enter in the Item Description</label>
-        <input id="description3" class="form-control" type="text" maxlength="40">
-        <input id="image1" type="file" onchange="previewFile()"><br>
-        <img id="image1" height="200" alt="Image preview...">
-      </form>
+                <form id="item-form">
+                  <br>
+                  <br>
+                  <label for="item">Enter in Item Name</label>
+                  <input id="item" class="form-control" type="text" maxlength="15">
+                  <label for="price">Enter in Price</label>
+                  <input id="price" class="form-control" type="text" maxlength="10">
+                  <label for="description">Enter in the Item Description</label>
+                  <input id="description" class="form-control" type="text" maxlength="40">
+                  <input id="image1" type="file" onchange="previewFile()"><br>
+                  <img id="image1" height="200" alt="Image preview...">
+                </form>
+                <form id="item-form2">
+                  <br>
+                  <br>
+                  <label for="item2">Enter in Item Name</label>
+                  <input id="item2" class="form-control" type="text" maxlength="15">
+                  <label for="price2">Enter in Price</label>
+                  <input id="price2" class="form-control" type="text" maxlength="10">
+                  <label for="description2">Enter in the Item Description</label>
+                  <input id="description2" class="form-control" type="text" maxlength="40">
+                  <input id="image1" type="file" onchange="previewFile()"><br>
+                  <img id="image1" height="200" alt="Image preview...">
+                </form>
+                <br>
+                <br>
+                <form id="item-form3">
+                  <label for="item3">Enter in Item Name</label>
+                  <input id="item3" class="form-control" type="text" maxlength="15">
+                  <label for="price3">Enter in Price</label>
+                  <input id="price3" class="form-control" type="text" maxlength="10">
+                  <label for="description3">Enter in the Item Description</label>
+                  <input id="description3" class="form-control" type="text" maxlength="40">
+                  <input id="image1" type="file" onchange="previewFile()"><br>
+                  <img id="image1" height="200" alt="Image preview...">
+                </form>
 
-    </div>
+              </div>
+              <div class="modal-footer">
+                <button id="addItem1" type="button" class="btn" data-dismiss="modal">Submit</button>
+                <button id="addItem2" type="button" class="btn" data-dismiss="modal">Submit</button>
+                <button id="addItem3" type="button" class="btn" data-dismiss="modal">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button id="addItem1" type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
-        <button id="addItem2" type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
-        <button id="addItem3" type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-
-
-
-
-
       <div class="col-md-4">
         <div id="contacts">
         </div>
