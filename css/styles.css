@@ -1,4 +1,5 @@
 body{
+  font-size: 16px;
 
   background: #E5E7E9
 }
@@ -20,6 +21,10 @@ body{
   border-bottom: 20px black;
   font-size: 60px;
   margin-bottom: -20px;
+}
+
+.title1{
+
 }
 
 .titleWords{
@@ -48,7 +53,7 @@ button{
 
 }
 
-#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs{
+#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount{
   display: none;
 }
 
@@ -70,6 +75,14 @@ button{
 #item-form, #item-form2, #item-form3,{
   width: 350px;
 }
+
+#createAccount{
+  height: auto;
+  width: 500px;
+}
+
+
+
 
 .well {
     background: white;
@@ -102,6 +115,7 @@ button{
 .navbar {
     background-color: #333;
     font-family: Arial;
+    height: auto;
 }
 
 .navbar a {
@@ -116,7 +130,6 @@ button{
 .dropdown {
     float: right;
     position: relative;
-
 }
 
 .dropdown .dropbtn {
@@ -135,18 +148,20 @@ button{
 }
 
 .dropdown-content {
+    font-size: 16px;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width: 300px;
 }
 
 .dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
+    width: auto;
     text-decoration: none;
     display: block;
     text-align: left;

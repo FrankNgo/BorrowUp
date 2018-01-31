@@ -33,6 +33,8 @@ function previewFile(){
 }
 
 
+
+
 $(document).ready(function() {
   $("#addItem1").click(function(event){
     event.preventDefault();
@@ -49,6 +51,7 @@ $(document).ready(function() {
     $("#addItem2").show();
     $(".contactUs").hide();
     $(".aboutUs").hide();
+    document.getElementById("item-form").reset();
   });
 
   $("#addItem2").click(function(event){
@@ -64,6 +67,7 @@ $(document).ready(function() {
     $("#addItem3").show();
     $(".contactUs").hide();
     $(".aboutUs").hide();
+    document.getElementById("item-form2").reset();
   });
   $("#addItem3").click(function(event){
     event.preventDefault();
@@ -78,6 +82,7 @@ $(document).ready(function() {
     $("#addItem1").show();
     $(".contactUs").hide();
     $(".aboutUs").hide();
+    document.getElementById("item-form3").reset();
 
   });
   function readURL(event){
@@ -108,9 +113,18 @@ $(document).ready(function() {
     event.preventDefault();
     $(".aboutUs").hide();
     $(".contactUs").hide();
+    $("#createAccount").hide();
     $("#contacts").fadeIn();
     $("#contacts2").fadeIn();
     $("#contacts3").fadeIn();
+  });
+
+  $("#create").click(function(event){
+    event.preventDefault();
+    $("#createAccount").fadeIn();
+    $("#contacts").hide();
+    $("#contacts2").hide();
+    $("#contacts3").hide();
   });
 
 
