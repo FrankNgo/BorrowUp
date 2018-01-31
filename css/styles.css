@@ -26,6 +26,18 @@ h2 {
     padding: 25px;
 }
 
+#modalSubmit{
+
+  float: left;
+}
+
+#addItem1, #addItem2, #addItem3{
+  float: left;
+
+
+
+}
+
 #addItem2, #addItem3, #item-form2, #item-form3{
   display: none;
 }
@@ -118,7 +130,7 @@ li a {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: grey;
 }
 
 .dropdown-content {

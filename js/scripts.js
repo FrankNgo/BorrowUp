@@ -42,7 +42,7 @@ $(document).ready(function() {
     var image1 = $(this).find('image').attr('src');
     console.log(image1);
     var newItem = new Item(item, price, description, image1);
-    $("#contacts").append("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
+    $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
@@ -56,7 +56,7 @@ $(document).ready(function() {
     var price2 = $("input#price2").val();
     var description2 = $("input#description2").val();
     var newItem2 = new Item2(item2, price2, description2);
-    $("#contacts2").append("<b><span class='contact'><div class='well well-lg'>" + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.itemDescription2 + "</div></span></b>");
+    $("#contacts2").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.itemDescription2 + "</div></span></b>");
     $("#item-form2").hide();
     $("#item-form3").show();
     $("#addItem2").hide();
@@ -68,7 +68,7 @@ $(document).ready(function() {
     var price3 = $("input#price3").val();
     var description3 = $("input#description3").val();
     var newItem3 = new Item3(item3, price3, description3);
-    $("#contacts3").append("<b><span class='contact'><div class='well well-lg'>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.itemDescription3 + "</div></span></b>");
+    $("#contacts3").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.itemDescription3 + "</div></span></b>");
     $("#item-form3").hide();
     $("#item-form").show();
     $("#addItem3").hide();
