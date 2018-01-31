@@ -41,8 +41,6 @@ $(document).ready(function() {
     var item = $("input#item").val();
     var price = $("input#price").val();
     var description = $("input#description").val();
-    var image1 = $(this).find('image').attr('src');
-    console.log(image1);
     var newItem = new Item (item, price, description, image1);
     $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
     $("#item-form").hide();
@@ -126,6 +124,8 @@ $(document).ready(function() {
     $("#contacts2").hide();
     $("#contacts3").hide();
   });
+
+
 
 
 });
