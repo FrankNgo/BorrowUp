@@ -43,7 +43,7 @@ button{
   float: left;
 }
 
-#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount, #confirmEmail, #loginInfo, #additembutton{
+#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount, #confirmEmail, #loginInfo, #additembutton,#logout,#logoutInfo{
   display: none;
 }
 
@@ -74,10 +74,11 @@ button{
   margin-top: 20px;
   width: 400px;
   font-size: 20px;
-  height: 170px;
+  height: 190px;
   position: absolute;
   left: 120px;
   font-weight: normal;
+  text-align: center;
 }
 
 

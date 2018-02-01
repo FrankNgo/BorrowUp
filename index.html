@@ -18,6 +18,7 @@
   </center>
   <div class="navbar">
     <a id="loginInfo" style="float:left">Logged in as: <span class="userLogin"></span></a>
+    <a id="logoutInfo" style="float:left">Successfully Logged Out</a>
     <a id="additembutton" style="float:left" data-toggle="modal" data-target="#myModal" href="#about">Add Item</a>
     <a class="contactUsLink" href="#news">Contact Us</a>
     <a class="aboutUsLink" href="#news">About Us</a>
@@ -61,6 +62,7 @@
           <br>
           <br>
           <button id="login" class="btn" type="submit">Login</button>
+          <button id="logout" class="btn" type="submit">logout</button>
           <button id="create" class="btn" type="submit">Create Account</button>
           <br>
           <label>
@@ -99,7 +101,7 @@
                 <label for="price">Enter in Price: </label>
                 <input id="price" class="form-control" type="text" maxlength="10">
                 <label for="phoneNumber">Enter in your best phone number: </label>
-                <input id="phoneNumber" class="form-control" type="text" maxlength="25">
+                <input id="phoneNumber" class="form-control" type="text" maxlength="10">
                 <label for="description">Enter in the Item Description: </label>
                 <input id="description" class="form-control" type="text" maxlength="50">
               </form>
@@ -109,7 +111,7 @@
                 <label for="price2">Enter in Price: </label>
                 <input id="price2" class="form-control" type="text" maxlength="10">
                 <label for="phoneNumber2">Enter in your best phone number: </label>
-                <input id="phoneNumber2" class="form-control" type="text" maxlength="25">
+                <input id="phoneNumber2" class="form-control" type="text" maxlength="10">
                 <label for="description2">Enter in the Item Description: </label>
                 <input id="description2" class="form-control" type="text" maxlength="50">
               </form>
@@ -119,7 +121,7 @@
                 <label for="price3">Enter in Price: </label>
                 <input id="price3" class="form-control" type="text" maxlength="10">
                 <label for="phoneNumber3">Enter in your phone number: </label>
-                <input id="phoneNumber3" class="form-control" type="text" maxlength="25">
+                <input id="phoneNumber3" class="form-control" type="text" maxlength="10">
                 <label for="description3">Enter in the Item Description: </label>
                 <input id="description3" class="form-control" type="text" maxlength="50">
               </form>
@@ -184,7 +186,8 @@
         <div class="well" id="confirmEmail">
           <label>Hey <span class="name"></span> thanks for signing up.</label>
           <label>Well send you a confirm email to <span class="email"></span></label>
-          <label>Please confirm your email.</label>
+          <label>Please confirm your email.</label><br><br>
+          <button id="goBack" class="btn">Go Back</button>
         </div>
       </div>
     </div>

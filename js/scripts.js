@@ -190,10 +190,36 @@ $(document).ready(function() {
   });
   $("#login").click(function(event){
     event.preventDefault();
-    $("#loginInfo").show();
-    $("#additembutton").show();
+    $("#loginInfo").fadeIn();
+    $("#additembutton").fadeIn();
+    $("#logout").show();
+    $("#login").hide();
+    $("#logoutInfo").hide();
     var userLogin = $("input#userLogin").val();
     $(".userLogin").text(userLogin);
-  });
 
+  });
+  $("#goBack").click(function(event){
+    event.preventDefault();
+    $(".aboutUs").hide();
+    $(".contactUs").hide();
+    $("#createAccount").hide();
+    $("#contacts").fadeIn();
+    $("#contacts2").fadeIn();
+    $("#contacts3").fadeIn();
+    $("#createAccount").hide();
+    $("#createAccount").hide();
+    $("#confirmEmail").hide();
+  });
+  $("#logout").click(function(event){
+    event.preventDefault();
+    $("#loginInfo").hide();
+    $("#additembutton").hide();
+    $("#logoutInfo").fadeIn("slow").delay(800).fadeOut("fast");
+    $("#login").show();
+    $("#logout").hide();
+    $("#imgInp1").hide();
+    $("#imgInp2").hide();
+    $("#imgInp3").hide();
+  });
 });
