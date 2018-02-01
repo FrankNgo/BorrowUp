@@ -88,9 +88,6 @@
                 <input id="price" class="form-control" type="text" maxlength="10">
                 <label for="description">Enter in the Item Description</label>
                 <input id="description" class="form-control" type="text" maxlength="40">
-                <input type=file name=filename id=file>
-                <!-- <input id="image1" type="file" onchange="previewFile()"><br>
-                <img id="image1" height="200" alt="Image preview..."> -->
               </form>
               <form id="item-form2">
                 <label for="item2">Enter in Item Name</label>
@@ -99,8 +96,6 @@
                 <input id="price2" class="form-control" type="text" maxlength="10">
                 <label for="description2">Enter in the Item Description</label>
                 <input id="description2" class="form-control" type="text" maxlength="40">
-                <input id="image1" type="file" onchange="previewFile()"><br>
-                <img id="image1" height="200" alt="Image preview...">
               </form>
               <form id="item-form3">
                 <label for="item3">Enter in Item Name</label>
@@ -109,8 +104,6 @@
                 <input id="price3" class="form-control" type="text" maxlength="10">
                 <label for="description3">Enter in the Item Description</label>
                 <input id="description3" class="form-control" type="text" maxlength="40">
-                <input id="image1" type="file" onchange="previewFile()"><br>
-                <img id="image1" height="200" alt="Image preview...">
               </form>
             </div>
             <div class="modal-footer">
@@ -126,11 +119,8 @@
     <div id="center" class="aboutUs">
       <div class="well" id="about">
         <h2><center>About Us</h2></center>
-        <p class="alignleft">When visitors view your About Us page, it is an opportunity for you to make them feel comfortable with your organization and establish trust. Many organizations will give their basic contact information and a short paragraph full of fluffy industry
-          buzzwords. I would like to challenge you to take your page a step further, however, by making a connection with your visitors and helping them feel comfortable choosing you. Here are a few steps to perfecting your About Us page. Include your
-          full address, or at least a city and state, to help potential donors and volunteers feel comfortable reaching out or donating to your organization. Make sure contact details are up to date and include links to your social media pages if you
-          have them…and you do have them, right?s There is no perfect formula for an About Us page, however, there are a few basic guidelines to follow. Spend time checking your analytics for traffic volumes, bounce rates and volume duration on your page,
-          and don’t be afraid to make changes accordingly. Your About Us page is a chance to tell your story and build trust with your audience.
+        <p class="alignleft">Here at BorrowUp we do things a little bit differently. BorrowUp is revolutionizing how you rent and lease locally. With a single snap, you can take a photo of an item and instantly circulate it to people nearby. Browse local items by image with thousands of new postings every day! Communicate with sellers entirely through our website. Rent and Lease in less than 30 seconds.
+
       </div>
     </div>
     <div id="center" class="contactUs">
@@ -138,7 +128,7 @@
         <div class="well" id="contact">
           <h2><center>Contact Us</h2></center>
           <ul class="alignleft">
-            <li>Something: Something</li>
+            <li>Email: FrankNgoMusic@gmail.com</li>
             <li>Something: Something</li>
             <li>Something: Something</li>
             <li>Something: Something</li>
@@ -183,7 +173,19 @@
       <div id="contacts3">
       </div>
     </div>
-    <input type="file">
+    <form id="form1" runat="server">
+        <input type='file' id="imgInp1" />
+
+    </form>
+    <form id="form2" runat="server">
+    <input type='file' id="imgInp2" />
+
+</form>
+
+<form id="form3" runat="server">
+<input type='file' id="imgInp3" />
+
+</form>
 
   </div>
 </body>

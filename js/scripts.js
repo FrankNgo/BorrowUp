@@ -18,38 +18,73 @@ function Item3(item3, price3, description3){
   this.itemDescription3 = description3;
 }
 
-function previewFile(){
- var preview = document.querySelector('img'); //selects the query named img
- var file = document.querySelector('input[type=file]').files[0]; //sames as here
- var reader  = new FileReader();
- reader.onloadend = function () {
-     preview.src = reader.result;
- }
- if (file) {
-     reader.readAsDataURL(file); //reads the data as a URL
- } else {
-     preview.src = "";
- }
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function readURL2(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah2').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function readURL3(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah3').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
 }
 
 
 
-
-
 $(document).ready(function() {
+  $("#imgInp1").change(function(){
+      readURL(this);
+  });
+
+
+  $("#imgInp2").change(function(){
+      readURL2(this);
+  });
+
+  $("#imgInp3").change(function(){
+      readURL3(this);
+  });
+
+
   $("#addItem1").click(function(event){
     event.preventDefault();
     var item = $("input#item").val();
     var price = $("input#price").val();
     var description = $("input#description").val();
-    var newItem = new Item (item, price, description, image1);
-    $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "<canvas id='cvs'></canvas>" +  "</div></span></b>");
+    var newItem = new Item (item, price, description);
+    $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + "<form id='form1' runat='server'><img id='blah' src='#' alt='your image' /></form>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
     $("#addItem2").show();
     $(".contactUs").hide();
     $(".aboutUs").hide();
+    $("#item-form").hide();
     document.getElementById("item-form").reset();
   });
 
@@ -59,7 +94,7 @@ $(document).ready(function() {
     var price2 = $("input#price2").val();
     var description2 = $("input#description2").val();
     var newItem2 = new Item2(item2, price2, description2);
-    $("#contacts2").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.itemDescription2 + "</div></span></b>");
+    $("#contacts2").prepend("<b><span class='contact'><div class='well well-lg'>" + "<form id='form2' runat='server'><img id='blah2' src='#' alt='your image' /></form>" + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.itemDescription2 + "</div></span></b>");
     $("#item-form2").hide();
     $("#item-form3").show();
     $("#addItem2").hide();
@@ -74,7 +109,7 @@ $(document).ready(function() {
     var price3 = $("input#price3").val();
     var description3 = $("input#description3").val();
     var newItem3 = new Item3(item3, price3, description3);
-    $("#contacts3").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.itemDescription3 + "</div></span></b>");
+    $("#contacts3").prepend("<b><span class='contact'><div class='well well-lg'>"+ "<form id='form3' runat='server'><img id='blah3' src='#' alt='your image' /></form>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.itemDescription3 + "</div></span></b>");
     $("#item-form3").hide();
     $("#item-form").show();
     $("#addItem3").hide();
@@ -130,37 +165,4 @@ $(document).ready(function() {
     $(".aboutUs").hide();
     $(".contactUs").hide();
   });
-  $('input').change(function() {
-
-      var fr = new FileReader;
-
-      fr.onload = function() {
-          var img = new Image;
-          img.onload = function() {
-              var c=document.getElementById("cvs");
-              var ctx=c.getContext("2d");
-              ctx.drawImage(img,0,0,200,180);
-          }
-          img.src = fr.result;
-
-      };
-
-      fr.readAsDataURL(this.files[0]);
-
-  });
-
-
-
 });
-
-// $(function() {
-// $(".button").click(function() {
-//     $("#myform #valueFromMyButton").text($(this).val().trim());
-//     $("#myform input[type=text]").val('');
-//     $("#myform").show(500);
-// });
-// $("#btnOK").click(function() {
-//     $("#valueFromMyModal").val($("#myform input[type=text]").val().trim());
-//     $("#myform").hide(400);
-// });
-// });
