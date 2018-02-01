@@ -43,6 +43,14 @@ button{
   float: left;
 }
 
+#logo{
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 0px;
+  left: 320px;
+
+}
 #addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount, #confirmEmail, #loginInfo, #additembutton,#logout,#logoutInfo{
   display: none;
 }
