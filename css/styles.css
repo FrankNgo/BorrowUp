@@ -174,3 +174,8 @@ button{
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+img{
+  height: 200px;
+  width: 200px;
+}

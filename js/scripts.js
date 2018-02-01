@@ -35,6 +35,7 @@ function previewFile(){
 
 
 
+
 $(document).ready(function() {
   $("#addItem1").click(function(event){
     event.preventDefault();
@@ -42,7 +43,7 @@ $(document).ready(function() {
     var price = $("input#price").val();
     var description = $("input#description").val();
     var newItem = new Item (item, price, description, image1);
-    $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
+    $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "<canvas id='cvs'></canvas>" +  "</div></span></b>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
@@ -83,10 +84,10 @@ $(document).ready(function() {
     document.getElementById("item-form3").reset();
 
   });
-  function readURL(event){
-         var getImagePath = URL.createObjectURL(event.target.files[0]);
-         $('#clock').css('background-image', 'url(' + getImagePath + ')');
-        }
+  // function readURL(event){
+  //        var getImagePath = URL.createObjectURL(event.target.files[0]);
+  //        $('#clock').css('background-image', 'url(' + getImagePath + ')');
+  //       }
 
   $(".aboutUsLink").click(function(event){
     event.preventDefault();
@@ -95,6 +96,7 @@ $(document).ready(function() {
     $("#contacts").hide();
     $("#contacts2").hide();
     $("#contacts3").hide();
+    $("#createAccount").hide();
 
   });
 
@@ -105,6 +107,7 @@ $(document).ready(function() {
     $("#contacts").hide();
     $("#contacts2").hide();
     $("#contacts3").hide();
+    $("#createAccount").hide();
   });
 
   $(".homeLink").click(function(event){
@@ -115,6 +118,7 @@ $(document).ready(function() {
     $("#contacts").fadeIn();
     $("#contacts2").fadeIn();
     $("#contacts3").fadeIn();
+    $("#createAccount").hide();
   });
 
   $("#create").click(function(event){
@@ -123,8 +127,27 @@ $(document).ready(function() {
     $("#contacts").hide();
     $("#contacts2").hide();
     $("#contacts3").hide();
+    $(".aboutUs").hide();
+    $(".contactUs").hide();
   });
+  $('input').change(function() {
 
+      var fr = new FileReader;
+
+      fr.onload = function() {
+          var img = new Image;
+          img.onload = function() {
+              var c=document.getElementById("cvs");
+              var ctx=c.getContext("2d");
+              ctx.drawImage(img,0,0,200,180);
+          }
+          img.src = fr.result;
+
+      };
+
+      fr.readAsDataURL(this.files[0]);
+
+  });
 
 
 
