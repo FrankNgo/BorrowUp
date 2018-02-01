@@ -161,6 +161,8 @@ $(document).ready(function() {
     $("#contacts2").fadeIn();
     $("#contacts3").fadeIn();
     $("#createAccount").hide();
+    $("#createAccount").hide();
+    $("#confirmEmail").hide();
   });
 
   $("#create").click(function(event){
@@ -172,4 +174,26 @@ $(document).ready(function() {
     $(".aboutUs").hide();
     $(".contactUs").hide();
   });
+  $("#confirmAccount").click(function(event){
+    event.preventDefault();
+    var name = $("input#name").val();
+    var email = $("input#email").val();
+    $(".name").text(name);
+    $(".email").text(email);
+    $("#createAccount").hide();
+    $("#confirmEmail").fadeIn();
+    $("#contacts").hide();
+    $("#contacts2").hide();
+    $("#contacts3").hide();
+    $(".aboutUs").hide();
+    $(".contactUs").hide();
+  });
+  $("#login").click(function(event){
+    event.preventDefault();
+    $("#loginInfo").show();
+    $("#additembutton").show();
+    var userLogin = $("input#userLogin").val();
+    $(".userLogin").text(userLogin);
+  });
+
 });

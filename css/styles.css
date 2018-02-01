@@ -36,7 +36,6 @@ button{
 }
 
 #modalSubmit{
-
   float: left;
 }
 
@@ -44,7 +43,7 @@ button{
   float: left;
 }
 
-#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount{
+#addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount, #confirmEmail, #loginInfo, #additembutton{
   display: none;
 }
 
@@ -71,6 +70,17 @@ button{
   width: 500px;
 }
 
+#confirmEmail{
+  margin-top: 20px;
+  width: 400px;
+  font-size: 20px;
+  height: 170px;
+  position: absolute;
+  left: 120px;
+  font-weight: normal;
+}
+
+
 .well {
     background: white;
     border: 1px solid black;
@@ -82,6 +92,7 @@ button{
   margin-top: 20px;
   width: 1200px;
   font-size: 20px;
+  height: 300px;
 }
 
 #contact{
