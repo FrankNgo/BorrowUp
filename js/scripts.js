@@ -1,21 +1,23 @@
 //Business Logic
-function Item(item, price, description, image1){
+function Item(item, price, description, phoneNumber){
   this.itemName = item;
   this.itemPrice = price;
   this.itemDescription = description;
-  this.image = image1;
+  this.phoneNumber = phoneNumber;
 }
 
-function Item2(item2, price2, description2){
+function Item2(item2, price2, description2, phoneNumber2){
   this.itemName2 = item2;
   this.itemPrice2 = price2;
   this.itemDescription2 = description2;
+  this.phoneNumber2 = phoneNumber2;
 }
 
-function Item3(item3, price3, description3){
+function Item3(item3, price3, description3, phoneNumber3){
   this.itemName3 = item3;
   this.itemPrice3 = price3;
   this.itemDescription3 = description3;
+  this.phoneNumber3 = phoneNumber3;
 }
 
 function readURL(input) {
@@ -73,11 +75,12 @@ $(document).ready(function() {
 
   $("#addItem1").click(function(event){
     event.preventDefault();
-    var item = $("input#item").val();
-    var price = $("input#price").val();
+    var item = "Item: " + $("input#item").val();
+    var price = "Price: $" + $("input#price").val();
     var description = $("input#description").val();
-    var newItem = new Item (item, price, description);
-    $("#contacts").prepend("<b><span class='contact'><div class='well well-lg'>" + "<form id='form1' runat='server'><img id='blah' src='#' alt='your image' /></form>" + newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.itemDescription + "</div></span></b>");
+    var phoneNumber = "Phone Number: " + $("input#phoneNumber").val();
+    var newItem = new Item (item, price, description, phoneNumber);
+    $("#contacts").prepend("<span class='contact'><div class='well well-lg'>" + "<form id='form1' runat='server'><img id='blah' src='#' alt='your image' /></form>" + "<br>" +  newItem.itemName + "<br>" + newItem.itemPrice + "<br>" + newItem.phoneNumber + "<br>" + newItem.itemDescription + "</div></span>");
     $("#item-form").hide();
     $("#item-form2").show();
     $("#addItem1").hide();
@@ -85,44 +88,48 @@ $(document).ready(function() {
     $(".contactUs").hide();
     $(".aboutUs").hide();
     $("#item-form").hide();
+    $("#imgInp1").show();
+    $("#imgInp3").hide();
     document.getElementById("item-form").reset();
   });
 
   $("#addItem2").click(function(event){
     event.preventDefault();
-    var item2 = $("input#item2").val();
-    var price2 = $("input#price2").val();
+    var item2 = "Item: " + $("input#item2").val();
+    var price2 = "Price: $" + $("input#price2").val();
     var description2 = $("input#description2").val();
-    var newItem2 = new Item2(item2, price2, description2);
-    $("#contacts2").prepend("<b><span class='contact'><div class='well well-lg'>" + "<form id='form2' runat='server'><img id='blah2' src='#' alt='your image' /></form>" + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.itemDescription2 + "</div></span></b>");
+    var phoneNumber2 = "Phone Number: " + $("input#phoneNumber2").val();
+    var newItem2 = new Item2(item2, price2, description2, phoneNumber2);
+    $("#contacts2").prepend("<span class='contact'><div class='well well-lg'>" + "<form id='form2' runat='server'><img id='blah2' src='#' alt='your image' /></form>" + "<br>"  + newItem2.itemName2 + "<br>" + newItem2.itemPrice2 + "<br>" + newItem2.phoneNumber2 + "<br>"+ newItem2.itemDescription2 + "</div></span>");
     $("#item-form2").hide();
     $("#item-form3").show();
     $("#addItem2").hide();
     $("#addItem3").show();
     $(".contactUs").hide();
     $(".aboutUs").hide();
+    $("#imgInp1").hide();
+    $("#imgInp2").show();
     document.getElementById("item-form2").reset();
   });
   $("#addItem3").click(function(event){
     event.preventDefault();
-    var item3 = $("input#item3").val();
-    var price3 = $("input#price3").val();
+    var item3 = "Item: " + $("input#item3").val();
+    var price3 = "Price: $" + $("input#price3").val();
     var description3 = $("input#description3").val();
-    var newItem3 = new Item3(item3, price3, description3);
-    $("#contacts3").prepend("<b><span class='contact'><div class='well well-lg'>"+ "<form id='form3' runat='server'><img id='blah3' src='#' alt='your image' /></form>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.itemDescription3 + "</div></span></b>");
+    var phoneNumber3 = "Phone Number: " + $("input#phoneNumber3").val();
+    var newItem3 = new Item3(item3, price3, description3, phoneNumber3);
+    $("#contacts3").prepend("<span class='contact'><div class='well well-lg'>"+ "<form id='form3' runat='server'><img id='blah3' src='#' alt='your image' /></form>"+ "<br>" + newItem3.itemName3 + "<br>" + newItem3.itemPrice3 + "<br>" + newItem3.phoneNumber3 + "<br>" + newItem3.itemDescription3 + "</div></span>");
     $("#item-form3").hide();
     $("#item-form").show();
     $("#addItem3").hide();
     $("#addItem1").show();
     $(".contactUs").hide();
     $(".aboutUs").hide();
+    $("#imgInp2").hide();
+    $("#imgInp3").show();
     document.getElementById("item-form3").reset();
 
   });
-  // function readURL(event){
-  //        var getImagePath = URL.createObjectURL(event.target.files[0]);
-  //        $('#clock').css('background-image', 'url(' + getImagePath + ')');
-  //       }
 
   $(".aboutUsLink").click(function(event){
     event.preventDefault();

@@ -1,9 +1,7 @@
 body{
   font-size: 16px;
-
   background: #E5E7E9
 }
-
 
 .title{
   background: url(https://i.imgur.com/HQbgknF.gif);
@@ -21,10 +19,6 @@ body{
   border-bottom: 20px black;
   font-size: 60px;
   margin-bottom: -20px;
-}
-
-.title1{
-
 }
 
 .titleWords{
@@ -48,15 +42,11 @@ button{
 
 #addItem1, #addItem2, #addItem3{
   float: left;
-
-
-
 }
 
 #addItem2, #addItem3, #item-form2, #item-form3, .aboutUs, .contactUs, #createAccount{
   display: none;
 }
-
 
 #btnOK{
   border:1px solid #000;
@@ -80,9 +70,6 @@ button{
   height: auto;
   width: 500px;
 }
-
-
-
 
 .well {
     background: white;
@@ -118,7 +105,7 @@ button{
     height: auto;
 }
 
-.navbar a {
+.navbar a{
     float: right;
     font-size: 16px;
     color: white;
@@ -180,6 +167,6 @@ img{
   width: 300px;
 }
 
-#form2, #form3{
-  display: none;
+#imgInp1, #imgInp2, #imgInp3{
+  display: none
 }
